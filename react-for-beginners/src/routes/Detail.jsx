@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import styles from "./Detail.module.css";
 
 function Detail() {
   const [loading, setLoading] = useState(true);
@@ -11,24 +12,31 @@ function Detail() {
     ).json();
     setMovie(json.data.movie);
     setLoading(false);
+    await console.log(movie);
   };
   useEffect(() => {
     getMovie();
   }, []);
   return (
-    <div>
+    <div className={styles.container}>
       {loading ? (
-        <h1>Loading...</h1>
+        <div className={styles.loader}>
+          <span>Loading...</span>
+        </div>
       ) : (
-        <div>
+        <div className={styles.movie}>
           <h1>{movie.title}</h1>
-          <img src={movie.large_cover_image} alt={movie.id} />
-          <ul>
+          <img
+            src={movie.large_cover_image}
+            alt={movie.id}
+            className={styles.movie__img}
+          />
+          <p className={styles.movie__rating}>Rating: {movie.rating}</p>
+          <ul className={styles.movie__genres}>
             {movie.genres.map((g) => (
               <li key={g}>{g}</li>
             ))}
           </ul>
-          <p>Rating: {movie.rating}</p>
         </div>
       )}
     </div>
