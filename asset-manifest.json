@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/Learn-React/static/js/main.cadb277a.js",
+    "main.css": "/Learn-React/static/css/main.277b4045.css",
+    "main.js": "/Learn-React/static/js/main.949c6095.js",
     "index.html": "/Learn-React/index.html",
-    "main.cadb277a.js.map": "/Learn-React/static/js/main.cadb277a.js.map"
+    "main.277b4045.css.map": "/Learn-React/static/css/main.277b4045.css.map",
+    "main.949c6095.js.map": "/Learn-React/static/js/main.949c6095.js.map"
   },
   "entrypoints": [
-    "static/js/main.cadb277a.js"
+    "static/css/main.277b4045.css",
+    "static/js/main.949c6095.js"
   ]
 }
